@@ -1,0 +1,35 @@
+<!-- challange 3/ 4: partials/ -->
+<%- include("partials/header"); -%>
+
+<!-- challange 1-->
+<h1>Home</h1>
+
+<!-- challange 2-->
+<p><%= homeStartingContent %></p>
+
+<!-- challange 12 - post the new blog post
+  <% //console.log(blogPost); %>
+-->
+
+<!-- challange 13 - post the new titles as an array
+<% //for(let i=0; i<blogPost.length; i++){ %>
+  <% //console.log(blogPost[i].titleBlog); %>
+<% //} %>
+-->
+
+<!-- challange 14-->
+<% //blogPost.forEach(function(post){ %>
+  <% //console.log(post.titleBlog); %>
+<% //}); %>
+
+<!-- challange 15 - post the new post on homepage-->
+<% posts.forEach(function(post){ %>
+  <h1><%= post.title %></h1>
+  <p>
+    <%= post.content.substring(0, 100) + " ..." %>
+    <a href="/posts/<%= post._id%>">Read More</a>
+  </p>
+<% }); %>
+
+<!-- challange 3/ 4: partials/ -->
+<%- include("partials/footer"); -%>
